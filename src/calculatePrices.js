@@ -22,9 +22,6 @@ const getAvailableDate = (parsedCustomerStartDate, parsedCustomerEndDate, parsed
     let availableDateObject;
     let inRange = false;
     for (let i = 0; i < parsedDatesArr.length; i++) {
-        // check if the customer's date is outside the range of the dates inside the array
-        if (parsedCustomerEndDate < parsedDatesArr[i].start_date || parsedCustomerStartDate > parsedDatesArr[i].end_date) continue;
-
         if (parsedCustomerStartDate >= parsedDatesArr[i].start_date && parsedCustomerStartDate <= parsedDatesArr[i].end_date) {
             availableDateObject = parsedDatesArr[i];
         }
